@@ -1,0 +1,19 @@
+
+.main {
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+  height: 100vh;
+
+  @include responsive(768px) {
+    grid-template-columns: 0 1fr;
+  }
+}
+
+.main-principal {
+  padding: 2rem 3rem;
+}
+
+.menu {
+  @include menu;
+  background-color: #fff;
+}
