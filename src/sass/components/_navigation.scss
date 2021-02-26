@@ -3,7 +3,7 @@
   background-color: $grayDark;
 
   @include responsive(768px) {
-    transform: translateX(-8rem);
+    transform: translateX(-100rem);
     background-color: $grayDarkSoft;
     left: 0;
     top: 0;
