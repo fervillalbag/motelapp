@@ -6,7 +6,6 @@ import { useRooms } from '../hooks/useRooms'
 export default function Rooms() {
 
   const data = useRooms()
-  console.log(data)
 
   return (
     <section className="rooms">
