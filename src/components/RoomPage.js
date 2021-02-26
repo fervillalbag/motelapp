@@ -27,11 +27,13 @@ export default function RoomPage({ data }) {
 
   return (
     <Layout>
-      <Link to="/" className="button-back">
-        <i class="fas fa-caret-left" style={{ marginRight: '0.25rem' }}></i>
-        Volver
-      </Link>
       <div className="room-page">
+        <Link to="/" className="button-back">
+          <i className="fas fa-caret-left"
+            style={{ marginRight: '0.5rem' }}>
+          </i>
+            Volver
+        </Link>
         <div className="room-page__media">
           <Image
             className="room-page__image"

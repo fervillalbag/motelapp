@@ -1,19 +1,84 @@
 
-import React from 'react'
+import React, { useState } from 'react'
 
 export default function Calculator() {
+
+  const [formValue, setFormValue] = useState({
+    service: '',
+    time: ''
+  })
+
+  const { service, time } = formValue
+
+  const [result, setResult] = useState(0)
+
+  const handleInputChange = ({ target }) => {
+    setFormValue({
+      ...formValue,
+      [target.name]: target.value
+    })
+  }
+
+  const handleSubmit = e => {
+    e.preventDefault()
+    console.log(formValue)
+
+    switch (true) {
+      case service === 'basico' || time === '1hora':
+        setResult('60.000')
+        break
+
+      case service === 'premium' || time === '1hora':
+        setResult('120.000')
+        break
+
+      case service === 'gold' || time === '1hora':
+        setResult('220.000')
+        break
+
+      case service === 'basico' || time === 'noche':
+        setResult('120.000')
+        break
+
+      case service === 'premium' || time === 'noche':
+        setResult('200.000')
+        break
+
+      case service === 'gold' || time === 'noche':
+        setResult('370.000')
+        break
+
+      default:
+        setResult(0)
+        break
+    }
+  }
+
   return (
-    <form className="calculator">
+    <form
+      className="calculator"
+      onSubmit={handleSubmit}
+    >
       <div className="calculator__group">
-        <select className="calculator__input">
+        <select
+          name="service"
+          className="calculator__input"
+          value={service}
+          onChange={handleInputChange}
+        >
           <option value="">-- Seleccione --</option>
-          <option value="">Básico</option>
-          <option value="">Premium</option>
-          <option value="">Gold</option>
+          <option value="basico">Básico</option>
+          <option value="premium">Premium</option>
+          <option value="gold">Gold</option>
         </select>
       </div>
       <div className="calculator__group">
-        <select className="calculator__input">
+        <select
+          name="time"
+          className="calculator__input"
+          value={time}
+          onChange={handleInputChange}
+        >
           <option value="">-- Seleccione --</option>
           <option value="1hora">1 ½ hora </option>
           <option value="noche">Noche</option>
@@ -21,7 +86,7 @@ export default function Calculator() {
       </div>
       <div className="calculator__group">
         <button
-          type="button"
+          type="submit"
           className="calculator__button"
           aria-label="Botón de Buscar"
         >
@@ -32,7 +97,7 @@ export default function Calculator() {
       </div>
       <div className="calculator__group">
         <div className="calculator__value">
-          Gs. 150.000
+          {`Gs. ${result}`}
         </div>
       </div>
       <div className="calculator__group calculator__group--trash">

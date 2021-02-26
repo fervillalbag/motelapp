@@ -7,7 +7,11 @@ export default function Navigation({ isMenuActive, handleMenuClick }) {
   return (
     <nav className={!isMenuActive ? 'navigation' : 'navigation active'}>
       <div className="navigation__content">
-        <Link activeClassName="page-active" to="/" className="navigation__link">
+        <Link
+          to="/"
+          className="navigation__link"
+          onClick={handleMenuClick}
+        >
           <span className="navigation__icon">
             <i className="fas fa-home"></i>
           </span>
@@ -15,7 +19,10 @@ export default function Navigation({ isMenuActive, handleMenuClick }) {
             Home
           </span>
         </Link>
-        <Link activeClassName="page-active" to="/" className="navigation__link">
+        <Link
+          to="/"
+          className="navigation__link"
+        >
           <span className="navigation__icon">
             <i className="fas fa-info"></i>
           </span>
@@ -23,7 +30,7 @@ export default function Navigation({ isMenuActive, handleMenuClick }) {
             Nosotros
           </span>
         </Link>
-        <Link activeClassName="page-active" to="/" className="navigation__link">
+        <Link to="/" className="navigation__link">
           <span className="navigation__icon">
             <i className="fas fa-at"></i>
           </span>
