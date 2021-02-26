@@ -1,0 +1,31 @@
+
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  grid-row-gap: 2rem;
+  margin-top: 3rem;
+
+  @include responsive(1125px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    align-items: center;
+  }
+  
+  &__icon {
+    font-size: 3rem;
+    color: $grayDark;
+    display: block;
+    text-align: center;
+  }
+
+  &__name {
+    font-size: 1.475rem;
+    font-weight: 500;
+    color: $grayDark;
+  }
+}

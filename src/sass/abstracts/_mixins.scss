@@ -28,4 +28,8 @@
   &:focus {
     outline: none;
   }
+
+  @include responsive(768px) {
+    padding: 0.875rem 1.75rem;
+  }
 }

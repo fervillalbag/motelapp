@@ -1,0 +1,48 @@
+
+.room-page {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 2rem;
+
+  @include responsive(800px) {
+    grid-template-columns: 1fr;
+  }
+
+  &__image {
+    height: 100vh;
+
+    @include responsive(800px) {
+      height: 60vh;
+    }
+  }
+
+  &__info {
+    padding: 5rem;
+
+    @include responsive(860px) {
+      padding: 3rem;
+    }
+  }
+
+  &__title {
+    font-size: 3.4rem;
+  }
+
+  &__description {
+    font-size: 1.75rem;
+    line-height: 1.75;
+    color: $grayDark;
+  }
+}
+
+.button-back {
+  @include menu;
+  width: 9rem;
+  left: 2rem;
+  top: 2.5rem;
+  text-align: center;
+  background-color: #fff;
+  position: fixed;
+  z-index: 100;
+  color: $grayDark;
+}

@@ -1,6 +1,5 @@
 
 import React, { Fragment, useState } from 'react'
-import Header from './Header'
 import Navigation from './Navigation'
 import SeoTemplate from './SeoTemplate'
 
@@ -34,12 +33,7 @@ export default function Layout({ children }) {
           isMenuActive={isMenuActive}
           handleMenuClick={handleMenuClick}
         />
-        <div className="content">
-          <Header />
-          <section className="main-principal">
-            {children}
-          </section>
-        </div>
+        {children}
       </main>
 
     </Fragment>
