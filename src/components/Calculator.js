@@ -24,33 +24,26 @@ export default function Calculator() {
     console.log(formValue)
 
     switch (true) {
-      case service === 'basico' || time === '1hora':
-        setResult('60.000')
-        break
+      case service === 'basico' && time === '1hora':
+        return setResult('60.000')
 
-      case service === 'premium' || time === '1hora':
-        setResult('120.000')
-        break
+      case service === 'premium' && time === '1hora':
+        return setResult('120.000')
 
-      case service === 'gold' || time === '1hora':
-        setResult('220.000')
-        break
+      case service === 'gold' && time === '1hora':
+        return setResult('220.000')
 
-      case service === 'basico' || time === 'noche':
-        setResult('120.000')
-        break
+      case service === 'basico' && time === 'noche':
+        return setResult('120.000')
 
-      case service === 'premium' || time === 'noche':
-        setResult('200.000')
-        break
+      case service === 'premium' && time === 'noche':
+        return setResult('200.000')
 
-      case service === 'gold' || time === 'noche':
-        setResult('370.000')
-        break
+      case service === 'gold' && time === 'noche':
+        return setResult('370.000')
 
       default:
-        setResult(0)
-        break
+        return setResult(0)
     }
   }
 
