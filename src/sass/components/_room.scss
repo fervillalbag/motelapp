@@ -49,14 +49,14 @@
     display: block;
     margin-top: 1.5rem;
     font-weight: 500;
-    font-size: 1.375rem;
+    font-size: 1.5rem;
 
     &.off {
-      color: red;
+      color: hsl(0, 100%, 40%);
     }
 
     &.active {
-      color: green;
+      color: hsl(120, 100%, 20%);
     }
   }
 }
