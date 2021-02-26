@@ -1,6 +1,10 @@
 
 .main-principal {
-  text-align: center;
-  font-size: 3rem;
-  margin-top: 0;
+  padding: 3rem;
+  
+  &__title {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 3.6rem;
+  }
 }

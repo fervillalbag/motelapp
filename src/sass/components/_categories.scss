@@ -1,0 +1,22 @@
+
+.categories {
+  margin-top: 4rem;
+  display: flex;
+
+  &__link {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: $grayDarkSoft;
+    margin-right: 1.5rem;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &.active {
+      font-weight: 700;
+      color: $grayDark;
+    }
+  }
+}

@@ -1,5 +1,6 @@
 
 import React, { Fragment, useState } from 'react'
+import Header from './Header'
 import Navigation from './Navigation'
 import SeoTemplate from './SeoTemplate'
 
@@ -20,7 +21,7 @@ export default function Layout({ children }) {
           onClick={handleShowMenu}
         >
           <span className="menu__icon">
-
+            <i className="fas fa-caret-right"></i>
           </span>
           <span className="menu__text">
             Menu
@@ -34,7 +35,7 @@ export default function Layout({ children }) {
           handleMenuClick={handleMenuClick}
         />
         <div className="content">
-          <header></header>
+          <Header />
           <section className="main-principal">
             {children}
           </section>

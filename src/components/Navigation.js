@@ -37,11 +37,11 @@ export default function Navigation({ isMenuActive, handleMenuClick }) {
           className="navigation-bars"
           onClick={handleMenuClick}
         >
+          <span className="menu__icon">
+            <i className="fas fa-caret-left"></i>
+          </span>
           <span className="menu__text">
             Cerrar
-          </span>
-          <span className="menu__icon">
-
           </span>
         </button>
 

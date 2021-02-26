@@ -9,11 +9,16 @@
   }
 }
 
-.main-principal {
-  padding: 2rem 3rem;
+.menu {
+  background-color: #fff;
+  display: none;
+  
+  @include responsive(768px) {
+    @include menu;
+  }
 }
 
-.menu {
-  @include menu;
-  background-color: #fff;
+.menu__icon {
+  font-size: 1.6rem;
+  display: block;
 }

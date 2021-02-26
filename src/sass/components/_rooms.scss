@@ -1,0 +1,20 @@
+
+.rooms {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 4rem;
+
+  @include responsive(1400px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include responsive(992px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+  }
+
+  @include responsive(576px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
