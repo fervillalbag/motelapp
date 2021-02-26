@@ -11,7 +11,7 @@ export default function Room({ room }) {
     <article className="room">
       <Link to={`${slug}`} className="room__link">
         <div className="room__media">
-          <Image fluid={image.fluid} />
+          <Image fluid={image.fluid} alt={`${title} image`} />
         </div>
         <div className="room__info">
           <h3 className="room__title">
@@ -20,7 +20,7 @@ export default function Room({ room }) {
           <p className="room__description">
             {shortDescription}
           </p>
-          <div className="room__price">
+          <div aria-hidden="true" className="room__price">
             <span className="room__coin">Gs.</span>
             <span className="room__value">{price}</span>
             <span className="room__thousands">mil</span>
