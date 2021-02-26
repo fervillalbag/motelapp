@@ -69,7 +69,7 @@
     color: #fff;
     display: none;
     margin: 0;
-    background-color: red;
+    background-color: hsl(5, 83%, 60%);
 
     @include responsive(768px) {
       display: flex;
