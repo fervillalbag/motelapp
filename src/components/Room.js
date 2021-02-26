@@ -14,9 +14,9 @@ export default function Room({ room }) {
           <Image fluid={image.fluid} alt={`${title} image`} />
         </div>
         <div className="room__info">
-          <h3 className="room__title">
+          <h2 className="room__title">
             {title}
-          </h3>
+          </h2>
           <p className="room__description">
             {shortDescription}
           </p>

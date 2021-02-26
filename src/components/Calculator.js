@@ -23,6 +23,8 @@ export default function Calculator() {
         <button
           type="button"
           className="calculator__button"
+          role="button"
+          aria-label="Botón de Buscar"
         >
           <span className="calculator__icon">
             <i className="fas fa-search"></i>
@@ -38,6 +40,8 @@ export default function Calculator() {
         <button
           type="button"
           className="calculator__button"
+          role="button"
+          aria-label="Botón de Borrar"
         >
           <span className="calculator__icon">
             <i className="fas fa-trash"></i>
