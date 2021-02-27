@@ -1,0 +1,50 @@
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: relative;
+
+  @include responsive(768px) {
+    grid-template-columns: 1fr;
+  }
+
+  &__image {
+    height: 100vh;
+
+    @include responsive(768px) {
+      height: 50vh;
+    }
+  }
+  
+  &__info {
+    padding: 7rem 5rem;
+
+    @include responsive(768px) {
+      padding: 3rem;
+    }
+  }
+
+  &__title {
+    color: $primary;
+    font-size: 3.4rem;
+    margin-bottom: 2rem;
+
+    @include responsive(768px) {
+      font-size: 2.8rem;
+    }
+  }
+
+  &__description {
+    color: $grayDark;
+    font-size: 1.8rem;
+    line-height: 1.6;
+  }
+
+  &__blockquote {
+    text-align: right;
+    font-size: 3rem;
+    margin-top: 4rem;
+    font-family: 'Lobster Two', sans-serif;
+    color: $grayDark;
+  }
+}

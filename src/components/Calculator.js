@@ -47,6 +47,14 @@ export default function Calculator() {
     }
   }
 
+  const handleReset = () => {
+    setResult(0)
+    setFormValue({
+      service: '',
+      time: ''
+    })
+  }
+
   return (
     <form
       className="calculator"
@@ -98,6 +106,7 @@ export default function Calculator() {
           type="button"
           className="calculator__button"
           aria-label="Botón de Borrar"
+          onClick={handleReset}
         >
           <span className="calculator__icon">
             <i className="fas fa-trash"></i>

@@ -1,6 +1,6 @@
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
-  const resultado = await graphql(`
+  const habitacionesData = await graphql(`
 		query {
 			allDatoCmsHabitacion {
 				nodes {
@@ -10,7 +10,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 		}
   `)
 
-  const resultado2 = await graphql(`
+  const categoriasData = await graphql(`
     query {
 			allDatoCmsCategory {
 				nodes {
@@ -20,17 +20,17 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 		}
   `)
 
-  if (resultado.errors) {
-    reporter.panic('No hubo resultados', resultado.errors)
+  if (habitacionesData.errors) {
+    reporter.panic('No hubo resultados', habitacionesData.errors)
   }
 
-  if (resultado2.errors) {
-    reporter.panic('No hubo resultados', resultado.errors)
+  if (categoriasData.errors) {
+    reporter.panic('No hubo resultados', categoriasData.errors)
   }
 
   // si hay paginas, crear los archivos
-  const habitaciones = resultado.data.allDatoCmsHabitacion.nodes
-  const categorias = resultado2.data.allDatoCmsCategory.nodes
+  const habitaciones = habitacionesData.data.allDatoCmsHabitacion.nodes
+  const categorias = categoriasData.data.allDatoCmsCategory.nodes
 
   habitaciones.forEach(habitacion => {
     actions.createPage({

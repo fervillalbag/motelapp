@@ -32,7 +32,7 @@ export default function RoomPage({ data }) {
           <i className="fas fa-caret-left"
             style={{ marginRight: '0.5rem' }}>
           </i>
-            Volver
+          Volver
         </Link>
         <div className="room-page__media">
           <Image

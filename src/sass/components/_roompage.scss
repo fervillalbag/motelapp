@@ -38,9 +38,9 @@
 
 .button-back {
   @include menu;
-  position: fixed;
+  position: absolute;
   width: 9rem;
-  left: 12rem;
+  left: 2rem;
   top: 2.5rem;
   display: block;
   text-align: center;

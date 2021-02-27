@@ -20,7 +20,7 @@ export default function Navigation({ isMenuActive, handleMenuClick }) {
           </span>
         </Link>
         <Link
-          to="/"
+          to="/nosotros"
           className="navigation__link"
         >
           <span className="navigation__icon">
@@ -30,7 +30,7 @@ export default function Navigation({ isMenuActive, handleMenuClick }) {
             Nosotros
           </span>
         </Link>
-        <Link to="/" className="navigation__link">
+        <Link to="/contacto" className="navigation__link">
           <span className="navigation__icon">
             <i className="fas fa-at"></i>
           </span>
