@@ -1,9 +1,9 @@
 
-import { Link } from 'gatsby'
 import React from 'react'
 import Benefits from './Benefits'
+import RoomPageFooter from './RoomPageFooter'
 
-export default function RoomPageInfo({ title, largeDescription, price }) {
+export default function RoomPageInfo({ title, largeDescription, price, condition }) {
 
   return (
     <div className="room-page__info">
@@ -14,21 +14,14 @@ export default function RoomPageInfo({ title, largeDescription, price }) {
         {largeDescription}
       </p>
       <Benefits />
-      <footer className="room-page__footer">
-        <span className="room-page__final-price">
-          Gs. {price} mil
-        </span>
-        <a
-          href="/"
-          target="_blank"
-          className="room-page__contact"
-        >
-          <span>
-            <i className="fab fa-whatsapp-square"></i>
-          </span>
-          <span>Reservar</span>
-        </a>
-      </footer>
+      <div className="room-page__condition">
+        {condition ? (
+          <span className="on">¡Disponible ahora mismo!</span>
+        ) : (
+            <span className="off">¡No Disponible!</span>
+          )}
+      </div>
+      <RoomPageFooter condition={condition} price={price} />
     </div>
   )
 }

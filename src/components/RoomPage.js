@@ -13,6 +13,7 @@ export const query = graphql`
 				title
         largeDescription
         price
+        condition
 				image {
 					fluid {
 						...GatsbyDatoCmsFluid
@@ -25,7 +26,7 @@ export const query = graphql`
 
 export default function RoomPage({ data }) {
 
-  const { title, largeDescription, image, price } = data.allDatoCmsHabitacion.nodes[0]
+  const { title, largeDescription, image, price, condition } = data.allDatoCmsHabitacion.nodes[0]
 
   return (
     <Layout>
@@ -42,6 +43,7 @@ export default function RoomPage({ data }) {
           title={title}
           largeDescription={largeDescription}
           price={price}
+          condition={condition}
         />
       </div>
     </Layout>
