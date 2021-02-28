@@ -3,7 +3,7 @@ import React from 'react'
 import Layout from '../components/Layout'
 import { useNosotros } from '../hooks/useNosotros'
 import Image from 'gatsby-image'
-import { Link } from 'gatsby'
+import ButtonBack from '../components/ButtonBack'
 
 export default function Nosotros() {
   const data = useNosotros()
@@ -13,12 +13,7 @@ export default function Nosotros() {
   return (
     <Layout>
       <div className="about">
-        <Link to="/" className="button-back">
-          <i className="fas fa-caret-left"
-            style={{ marginRight: '0.5rem' }}>
-          </i>
-          Volver
-        </Link>
+        <ButtonBack />
         <div className="about__media">
           <Image
             fluid={image.fluid}

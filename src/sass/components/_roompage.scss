@@ -39,20 +39,14 @@
 .button-back {
   @include menu;
   position: absolute;
-  width: 9rem;
   left: 2rem;
-  top: 2.5rem;
+  width: 9rem;
   display: block;
-  text-align: center;
-  background-color: #fff;
-  z-index: 100;
   color: $grayDark;
-  padding: 0.75rem 1.25rem;
 }
 
 @media screen and (max-width: 768px) {
   .button-back {
     @include menu;
-    left: 2rem;
   }
 }

@@ -1,9 +1,10 @@
 
 import React from 'react'
 import Layout from './Layout'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import Image from 'gatsby-image'
 import Benefits from './Benefits'
+import ButtonBack from './ButtonBack'
 
 export const query = graphql`
   query($slug: String!) {
@@ -28,12 +29,7 @@ export default function RoomPage({ data }) {
   return (
     <Layout>
       <div className="room-page">
-        <Link to="/" className="button-back">
-          <i className="fas fa-caret-left"
-            style={{ marginRight: '0.5rem' }}>
-          </i>
-          Volver
-        </Link>
+        <ButtonBack />
         <div className="room-page__media">
           <Image
             className="room-page__image"

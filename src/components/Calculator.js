@@ -63,6 +63,7 @@ export default function Calculator() {
       <div className="calculator__group">
         <select
           name="service"
+          id="service"
           className="calculator__input"
           value={service}
           onChange={handleInputChange}
@@ -72,6 +73,7 @@ export default function Calculator() {
           <option value="premium">Premium</option>
           <option value="gold">Gold</option>
         </select>
+        <label htmlFor="service">(Categoría)</label>
       </div>
       <div className="calculator__group">
         <select
@@ -84,6 +86,7 @@ export default function Calculator() {
           <option value="1hora">1 ½ hora </option>
           <option value="noche">Noche</option>
         </select>
+        <label htmlFor="service">(Tiempo)</label>
       </div>
       <div className="calculator__group">
         <button

@@ -49,6 +49,20 @@
         grid-row: 3 / 4;
       }
     }
+
+    > label {
+      display: block;
+      margin-top: 0.75rem;
+      font-weight: 500;
+      color: gray;
+      font-size: 1.25rem;
+      text-align: center;
+
+      @include responsive(768px) {
+        text-align: left;
+        margin-top: 1rem;
+      }
+    }
   }
   
   &__input {
