@@ -94,4 +94,8 @@
 
 #gmap_canvas {
   height: 100vh;
+
+  @include responsive(768px) {
+    height: 32rem;
+  }
 }

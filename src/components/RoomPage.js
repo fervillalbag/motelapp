@@ -1,10 +1,11 @@
 
 import React from 'react'
 import Layout from './Layout'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import Image from 'gatsby-image'
 import Benefits from './Benefits'
 import ButtonBack from './ButtonBack'
+import BackgroundImage from 'gatsby-background-image'
 
 export const query = graphql`
   query($slug: String!) {
@@ -31,11 +32,11 @@ export default function RoomPage({ data }) {
       <div className="room-page">
         <ButtonBack />
         <div className="room-page__media">
-          <Image
+          <BackgroundImage
             className="room-page__image"
             fluid={image.fluid}
             alt={`${title} image`}
-          />
+          ></BackgroundImage>
         </div>
         <div className="room-page__info">
           <h3 className="room-page__title">
