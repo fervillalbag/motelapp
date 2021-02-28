@@ -4,9 +4,14 @@
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 2rem;
   position: relative;
+  padding-bottom: 2rem;
 
   @include responsive(800px) {
     grid-template-columns: 1fr;
+  }
+
+  @include responsive(350px) {
+    padding-bottom: 8rem;
   }
 
   &__image {
@@ -42,6 +47,16 @@
     height: 5rem;
     align-items: center;
     grid-column-gap: 3rem;
+
+    @include responsive(768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include responsive(350px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, 5rem);
+      grid-row-gap: 2rem;
+    }
   }
 
   &__final-price {
@@ -63,7 +78,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    grid-gap: 1rem;
     border-radius: 2rem;
     font-size: 1.75rem;
     font-weight: 700;
@@ -75,6 +89,7 @@
     span:nth-child(1) {
       display: block;
       font-size: 2.4rem;
+      margin-right: 1rem;
     }
 
     span:nth-child(2) {
