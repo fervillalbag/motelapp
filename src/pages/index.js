@@ -5,22 +5,25 @@ import Calculator from "../components/Calculator"
 // import Categories from "../components/Categories"
 import Layout from "../components/Layout"
 import Rooms from "../components/Rooms"
+import SmoothScroll from "../components/SmoothScroll"
 
 export default function IndexPage() {
 
   return (
-    <Layout>
-      <div className="content">
-        <Header />
-        <section className="main-principal">
-          <h1 className="main-principal__title">
-            Nombre de la Empresa
+    <SmoothScroll>
+      <Layout>
+        <div className="content">
+          <Header />
+          <section className="main-principal">
+            <h1 className="main-principal__title">
+              Nombre de la Empresa
           </h1>
-          <Calculator />
-          {/* <Categories /> */}
-          <Rooms />
-        </section>
-      </div>
-    </Layout>
+            <Calculator />
+            {/* <Categories /> */}
+            <Rooms />
+          </section>
+        </div>
+      </Layout>
+    </SmoothScroll>
   )
 }
