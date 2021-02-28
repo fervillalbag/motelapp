@@ -89,6 +89,10 @@
     font-weight: 700;
     height: 4rem;
     cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
   }
 }
 

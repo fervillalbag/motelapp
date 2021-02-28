@@ -3,7 +3,6 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 export default function Navigation({ isMenuActive, handleMenuClick }) {
-
   return (
     <nav className={!isMenuActive ? 'navigation' : 'navigation active'}>
       <div className="navigation__content">

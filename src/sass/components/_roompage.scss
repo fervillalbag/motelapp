@@ -34,6 +34,53 @@
     line-height: 1.75;
     color: $grayDark;
   }
+
+  &__footer {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 16rem);
+    height: 5rem;
+    align-items: center;
+    grid-column-gap: 3rem;
+  }
+
+  &__final-price {
+    text-align: center;
+    line-height: 5rem;
+    height: 100%;
+    display: block;
+    border-radius: 2rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    color: #999;
+    font-weight: 700;
+  }
+
+  &__contact {
+    text-align: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 1rem;
+    border-radius: 2rem;
+    font-size: 1.75rem;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: #d2d2d2;
+    margin: 0;
+    color: #999;
+
+    span:nth-child(1) {
+      display: block;
+      font-size: 2.4rem;
+    }
+
+    span:nth-child(2) {
+      display: block;
+    }
+  }
 }
 
 .button-back {

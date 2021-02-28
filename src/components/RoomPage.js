@@ -1,18 +1,18 @@
 
 import React from 'react'
 import Layout from './Layout'
-import { graphql, Link } from 'gatsby'
-import Image from 'gatsby-image'
-import Benefits from './Benefits'
+import { graphql } from 'gatsby'
 import ButtonBack from './ButtonBack'
 import BackgroundImage from 'gatsby-background-image'
+import RoomPageInfo from './RoomPageInfo'
 
 export const query = graphql`
   query($slug: String!) {
 		allDatoCmsHabitacion(filter: { slug: { eq: $slug } }) {
 			nodes {
 				title
-				largeDescription
+        largeDescription
+        price
 				image {
 					fluid {
 						...GatsbyDatoCmsFluid
@@ -25,7 +25,7 @@ export const query = graphql`
 
 export default function RoomPage({ data }) {
 
-  const { title, largeDescription, image } = data.allDatoCmsHabitacion.nodes[0]
+  const { title, largeDescription, image, price } = data.allDatoCmsHabitacion.nodes[0]
 
   return (
     <Layout>
@@ -38,15 +38,11 @@ export default function RoomPage({ data }) {
             alt={`${title} image`}
           ></BackgroundImage>
         </div>
-        <div className="room-page__info">
-          <h3 className="room-page__title">
-            {title}
-          </h3>
-          <p className="room-page__description">
-            {largeDescription}
-          </p>
-          <Benefits />
-        </div>
+        <RoomPageInfo
+          title={title}
+          largeDescription={largeDescription}
+          price={price}
+        />
       </div>
     </Layout>
   )
