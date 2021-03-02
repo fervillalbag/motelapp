@@ -17,7 +17,7 @@ export default function RoomPageFooter({ price, condition }) {
         <span>
           <i className="fab fa-whatsapp-square"></i>
         </span>
-        <span>Reservar</span>
+        <span>Contactar</span>
       </a>
     </footer>
   )
