@@ -27,7 +27,7 @@ export default function IndexPage() {
           </Link>
           {/* <Calculator /> */}
           {/* <Categories /> */}
-          <h3 className="main-principal__subtitle">Habitaciones</h3>
+          <h2 className="main-principal__subtitle">Habitaciones</h2>
           <Rooms />
         </section>
       </div>
